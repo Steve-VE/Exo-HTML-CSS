@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Les bases de l'html</title>
+</head>
+<body>
+        <div id="content">
+            <h1>Les bases de l'HTML<span class="source"><sup><a href="https://developer.mozilla.org/fr/docs/Web/HTML/Element">source</a></sup></span></h1>
+            
+            <h2>Les balises</h2>
+                <h3>Les balises paires</h3>
+                <p>
+                    Les balises paires sont des balises qui fonctionnent par paire, forcément ! <br>
+                    La première balise est ce qu'on appelle une balise "<em>ouvrante</em>", et la seconde balise est la balise "<em>fermante</em>". <br>
+                </p>
+                <p>
+                    Les balises paires fonctionnent comme ceci : <br>
+                    <div class="tabulation">En premier lieu, on écrit la balise qui sera constitué des caractères suivant: < ></div>
+                    <div class="tabulation">On écrit à l'intérieur le nom de la balise. Par exemple : &lt;body&gt;</div>
+                    <div class="tabulation">Enfin, on écrit notre contenu après la balise, et ensuite on la referme avec une autre balise du même nom mais avec un slash ( / ) devant le nom : 
+                        &lt;body&gt; Le contenu placé à l'intérieur de la balise &lt;/body&gt;</div>
+                </p>
+                <p>
+                    Exemple de balises paires : <br>
+                    <pre>&lt;body&gt;&lt;/body&gt; : C'est le "corps" de votre page web.</pre>
+                    <pre>&lt;div&gt;&lt;/div&gt; : Permet de créer un élément servant à structurer notre page web et auquel on pourra attribué un id et/ou une ou plusieurs classes.</pre>
+                    <pre>&lt;h1&gt;&lt;/h1&gt; : Permet d'écrire un un titre (h1 pour le titre principal, h2 pour un sous-titre et ainsi de suite jusqu'à h6).</pre>
+                    <pre>&lt;p&gt;&lt;/p&gt; : Permet d'écrire un paragraphe.</pre>
+                    <pre>&lt;strong&gt;&lt;/strong&gt; : Ecrit en gras le texte qui se trouve à l'intérieur de la balise.</pre>
+                </p>
+
+                <h3>Les balises orphelines</h3>
+                <p>
+                    Contrairement aux balises fonctionnant par paire, les balises orphelines fonctionnent seules.
+                </p>
+                <p>
+                    Exemple de balises orphelines : <br>
+                    <pre>&lt;br&gt; : Crée un retour à la ligne.</pre>
+                    <pre>&lt;img&gt; : Permet de placer une image sur notre page web (nécessite des attributs, mais nous verrons ça plus bas).</pre>
+                    <pre>&lt;hr&gt; : Place un trait qui sépare votre contenu.</pre>
+                </p>
+
+            <h2>Les attributs</h2>
+                <p>
+                    Les balises peuvent prendre des attributs. Ces attributs permettent aux balises de savoir quoi faire et de leur passer des informations. <br>
+                    Dans le cas d'une balise image par exemple, nous aurons ceci : <br>
+                    <pre>&lt;img src="emplacement_de_l_image/nom_de_l_image.png" alt="Texte qui définit l'image" &gt;</pre>
+                    Dans ce cas ci, l'attribut src (source) permet de passer à la balise img le chemin de l'image qu'elle doit afficher, et l'attribut alt (texte alternatif) permet d'afficher un texte en cas d'erreur lorsque l'image ne s'affiche pas. <br>
+                    Un autre exemple que vous rencontrerez courramment est le suivant : <br>
+                    <pre>&lt;div id="article"&gt;&lt;/div&gt;</pre>
+                    Ici, on donne un id à notre div signifiant qu'il s'agit d'un article. Cette id peut servir à la fois à la naviguation (lien interne à la page) et à la fois au design en le reliant à une feuille de style (CSS).
+                </p>
+
+            <h2>La différence entre inline et block</h2>
+                <p>
+                    Une balise dite "inline" se place parmis du texte, elle ne crée pas de retour à la ligne et, en général, sert à modifier et mettre en forme du texte. <br>
+                    À l'inverse, les balises dites "block" font créer un retour à la ligne. Elles n'ont pas pour but de formater votre texte, mais de structurer votre page.
+                </p>
+                <ul>
+                    <li>Exemple de balises inline : </li>
+                    <ul>
+                        <li>
+                            <pre>&lt;span&gt;&lt;/span&gt;</pre>
+                        </li>
+                        <li>
+                            <pre>&lt;strong&gt;&lt;/strong&gt;</pre>
+                        </li>
+                        <li>
+                            <pre>&lt;a&gt;</pre>
+                        </li>
+                    </ul>
+
+                    <li>Exemple de balises block :</li>
+                    <ul>
+                        <li>
+                            <pre>&lt;div&gt;&lt;/div&gt;</pre>
+                        </li>
+                        <li>
+                            <pre>&lt;h1&gt;&lt;/h1&gt;</pre>
+                        </li>
+                        <li>
+                            <pre>&lt;a&gt;</pre>
+                        </li>
+                    </ul>
+                </ul>
+                Il existe aussi des balises dites "inline-block" qui se comportent comme des balises inline mais avec des attributs propres aux balises block. <br>
+                Vous en connaissez déjà une, puisque la balise img en est une ! <br>
+
+            <h2>Le MarkDown et l'HTML<span class="source"><sup><a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#images">source</a></sup></span></h2>
+                <p>
+                    Le <strong>MarkDown</strong> fonctionne un peu comme de l'HTML mais en version simplifié.
+                    En somme, au lieu d'utiliser des balises, on va se servir de caractères particuliers pour mettre en forme notre texte. <br>
+                    Par exemple, pour mettre du texte en gras : 
+                    <pre><h4>HTML</h4> Un élément du texte est &lt;strong&gt;important&lt;/strong&gt; !
+                    </pre>
+                    <pre><h4>MarkDown</h4>Un élément du texte est *important* !
+                    </pre>
+                    Le MarkDown s'écrit dans des documents dont l'extension est en .md (tout comme l'HTML s'écrit dans des documents .html).
+                    Là où le MarkDown est lu, il sera converti en HTML. <br>
+                </p>
+                <p>
+                    Quelques exemples supplémentaires : 
+                    <ul>
+                        <li>
+                            Pour afficher une image : 
+                            <pre><h4>HTML</h4>&lt;a src="emplacement_de_l_image/nom_de_l_image.png" alt="Texte alternatif"&gt;
+                            </pre>
+                            <pre><h4>MarkDown</h4>[Texte alternatif](emplacement_de_l_image/nom_de_l_image.png "Description de l'image")
+                            </pre>
+                        </li>
+                        <li>
+                            Pour écrire une citation : 
+                            <pre> <h4>HTML</h4>&lt;blockquote&gt;<br>"La soumission n'est pas une option pour ceux qui ont une moustache de champion"<br>- Simon Proulx<br>&lt;/blockquote&gt;
+                            </pre>
+                            <pre>
+                                <h4>MarkDown</h4>> "La soumission n'est pas une option pour ceux qui ont une moustache de champion" 
+> - Simon Proulx
+                            </pre>
+                        </li>
+                        <li>
+                            Pour afficher une vidéo YouTube<span class="source"><sup><a href="https://damien.pobel.fr/post/youtube-video-github/">source</a></sup></span> : 
+                            <pre><h4>HTML</h4>&lt;iframe width="420" height="315"
+src="https://www.youtube.com/embed/id_de_la_video"&gt;
+&lt;/iframe&gt;
+                            </pre>
+                            <pre><h4>MarkDown</h4>[![Texte alternatif](https://www.youtube.com/embed/id_de_la_video/0.jpg)](https://www.youtube.com/embed/id_de_la_video)
+                            </pre>
+                         </li>
+                    </ul>
+                </p>
+        </div>
+</body>
+</html>
